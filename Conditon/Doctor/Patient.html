@@ -1,0 +1,39 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Online Doctor</title>
+    <script src="../Scripts/jquery-2.1.1.js"></script>  
+    <script src="../Scripts/angular.js"></script>
+    <script type="text/javascript" src="http://cdn.peerjs.com/0.3/peer.js"></script>
+    <!--<script type="text/javascript" src="js/peerjs.js"></script>-->
+   
+    <script src="../Scripts/materialize/materialize.js"></script>
+    <link href="../content/materialize/materialize.css" rel="stylesheet" />
+    <script src="js/showAddress.js"></script>
+    <script type="text/javascript" src="http://maps.googleapis.com/maps/api/js?sensor=false"></script>
+</head>
+<body  onload="initialize()">
+    <div class="row">
+        <nav class="blue darken-1">
+            <div class="nav-wrapper">
+                <a href="index.html" class="brand-logo">My Claim</a>
+                <ul id="nav-mobile" class="right hide-on-med-and-down">
+                    <li><a href="sass.html">Doctor</a></li>
+                    <li><a href="components.html">Claim Status</a></li>
+                    <li><a href="javascript.html">Hospital Locator</a></li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+
+    <div class="row">
+        <div id="DoctorConnect" class="col s12 m12 left">
+            <video autoplay muted id="their-video"></video> 
+        </div>
+        <div class="col s12 m6 right">
+            <a id="gpCall" href="gpDoctor.html">Redial Doctor</a>
+        </div>
+    </div>
+    <script type="text/javascript" src="js/patient.js"></script>
+</body>
+</html>
