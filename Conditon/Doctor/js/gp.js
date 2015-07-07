@@ -69,9 +69,15 @@
 
         navigator.getWebcam({ video: true, audio: true },
           function (stream) {
-              $("#Patient-Video").prop('src', URL.createObjectURL(stream));
+             
               peer.on('call', function (call) {
                   call.answer(stream);
+                  call.on('stream', function (stream) {
+                      var video = document.querySelector('Patient-Video');
+                      video.src = window.URL.createObjectURL(stream);
+                      // `stream` is the MediaStream of the remote peer.
+                      // Here you'd add it to an HTML video/canvas element.
+                  });
                   console.log(call);
               });
 
