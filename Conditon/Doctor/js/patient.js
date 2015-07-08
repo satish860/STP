@@ -48,8 +48,10 @@
     navigator.getUserMedia(vgaConstraints, function (stream) {
         var video = document.querySelector('video');
         video.src = window.URL.createObjectURL(stream);
-        var connection = peer.call('GP',stream);
-
+        var call = peer.call('GP',stream);
+        call.on('stream', function (remotetream) {
+            video.src = window.URL.createObjectURL(stream);
+        });
         window.localstream = stream;
     }, errorCallback);
 
