@@ -27,16 +27,46 @@
     </div>
 
     <div class="row">
-        <div id="DoctorConnect" class="col s12 m12 left">
-            <video autoplay muted id="their-video"></video> 
-        </div>
-        <div class="col s12 m6 right">
-            <a id="gpCall" href="gpDoctor.html">Redial Doctor</a>
+
+        <div class="row">
+            <div class="col s5 m5 15">
+                <div class="card">
+                    <div class="card-image">
+                        <video width="500" height="400" autoplay  id="their-video"></video> 
+                        <span class="card-title">GP : John - Online </span>
+                    </div>
+                    <div class="card-content">
+                        <p>
+                           Condition : Knee Pain<br />
+                           
+                           
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Re-Connect</a>
+                    </div>
+                </div>
+            </div>
+       
+            <div class="col s5 m7 l5">
+                <div class="card">
+                    <div class="card-image">
+                        <video width="500" height="400"  autoplay muted id="myvideo"></video>
+                        <span class="card-title"> </span>
+                    </div>
+                    <div class="card-content">
+                        <p>
+                            You are Online and active . Do you provide your NHS History to the doctor
+                        </p>
+                    </div>
+                    <div class="card-action">
+                        <a href="#">Authorize My NHS Data</a>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="row">
-        <video width="300" height="300" autoplay muted id="myvideo"></video>
-    </div>
+   
     <script type="text/javascript" src="js/patient.js"></script>
 </body>
 </html>

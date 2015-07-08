@@ -31,60 +31,69 @@
     </div>
 
     <div class="row">
-        <div class="col s12 m6 left">
-            <div class="col s12 m6 left">
-                <video width="400px" height="300px" autoplay muted id="patvideo"></video>
+        <div class="col s6 m6 16 left">
+            <div class="card">
+                <div class="card-image">
+                    <video width="600" height="300" autoplay  id="patvideo"></video>
+                    <span class="card-title">GP : John - Online </span>
+                </div>
+                <div class="card-content">
+                    <p>
+                        Condition : Knee Pain<br />
+                    </p>
+                </div>
+                <div class="card-action">
+                    <a href="#">Re-Connect</a>
+                </div>
             </div>
-        </div>
-       
-        <div class="col s12 m6 right">
-            <h5>Claim Form</h5>
-            <div class="row">
-                <form class="col s12" ng-submit="SendMail()">
-                    <div class="row">
-                        <div class="input-field col s12 m12">
-                            <input id="first_name" type="text" ng-model="diag" class="validate">
-                            <label for="first_name">Diagonsis</label>
-                        </div>
+            </div>
 
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <select >
-                                <option value="" selected>Choose your option</option>
-                                <option value="1">Option 1</option>
-                                <option value="2">Option 2</option>
-                                <option value="3">Option 3</option>
-                            </select>                            
-                        </div>
-                    </div>
-                   
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="email" type="email" ng-model="email" class="validate">
-                            <label for="email">Email</label>
-                        </div>
-                    </div>
-                    <div class="row">
-                        <div class="file-field input-field col s12">
-                            <input id="fileUpload" type="text" ng-model="file" value="Submit" class="file-path validate">
-                            <div class="btn">
-                                <span>file</span>
-                                <input type="file" />
+            <div class="col s12 m6 right">
+                <h5>Claim Form</h5>
+                <div class="row">
+                    <form class="col s12" ng-submit="SendMail()">
+                        <div class="row">
+                            <div class="input-field col s12 m12">
+                                <input id="first_name" type="text" ng-model="diag" class="validate">
+                                <label for="first_name">Diagonsis</label>
                             </div>
                         </div>
-                    </div>
-                    <div class="row">
-                        <div class="input-field col s12">
-                            <input id="submit" type="submit" value="Submit" class="btn">
-                           
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <select>
+                                    <option value="" selected>Choose your option</option>
+                                    <option value="1">Option 1</option>
+                                    <option value="2">Option 2</option>
+                                    <option value="3">Option 3</option>
+                                </select>
+                            </div>
                         </div>
-                    </div>
-                </form>
-            </div>
 
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="email" type="email" ng-model="email" class="validate">
+                                <label for="email">Email</label>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="file-field input-field col s12">
+                                <input id="fileUpload" type="text" ng-model="file" value="Submit" class="file-path validate">
+                                <div class="btn">
+                                    <span>file</span>
+                                    <input type="file" />
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="input-field col s12">
+                                <input id="submit" type="submit" value="Submit" class="btn">
+
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
-    </div>
 
 
 </body>
