@@ -72,9 +72,8 @@
              
               peer.on('call', function (call) {
                   call.answer(stream);
-                  call.on('stream', function (stream) {
-                      var video = document.querySelector('Patient-Video');
-                      video.src = window.URL.createObjectURL(stream);
+                  call.on('stream', function (remotestream) {
+                      $('#patvideo').prop('src', URL.createObjectURL(remotestream));
                       // `stream` is the MediaStream of the remote peer.
                       // Here you'd add it to an HTML video/canvas element.
                   });
