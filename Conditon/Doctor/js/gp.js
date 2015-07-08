@@ -69,7 +69,7 @@
 
         navigator.getWebcam({ video: true, audio: true },
           function (stream) {
-             
+
               peer.on('call', function (call) {
                   call.answer(stream);
                   call.on('stream', function (remotestream) {

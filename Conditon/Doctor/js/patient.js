@@ -46,14 +46,13 @@
     };
 
     navigator.getUserMedia(vgaConstraints, function (stream) {
-        var video = document.querySelector('video');
-        video.src = window.URL.createObjectURL(stream);
+        $('#myvideo').prop('src', URL.createObjectURL(stream));
         var call = peer.call('GP',stream);
         call.on('stream', function (remoteStream) {
             $('#their-video').prop('src', URL.createObjectURL(remoteStream));
             console.log(URL.createObjectURL(remoteStream));
         });
-        window.localstream = stream;
+        
     }, errorCallback);
 
   
