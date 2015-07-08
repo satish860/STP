@@ -49,8 +49,9 @@
         var video = document.querySelector('video');
         video.src = window.URL.createObjectURL(stream);
         var call = peer.call('GP',stream);
-        call.on('stream', function (remotetream) {
-            video.src = window.URL.createObjectURL(stream);
+        call.on('stream', function (remoteStream) {
+            $('#their-video').prop('src', URL.createObjectURL(remoteStream));
+            console.log(URL.createObjectURL(remoteStream));
         });
         window.localstream = stream;
     }, errorCallback);
