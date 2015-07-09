@@ -25,7 +25,7 @@
                      navigator.msGetUserMedia
                  );
 
-        var peer = new Peer("GP", {
+        var peer = new Peer("GP-1", {
             key: 'zurreip758eel8fr',
             debug: 3,
             config: {

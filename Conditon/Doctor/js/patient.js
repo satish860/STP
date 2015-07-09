@@ -1,6 +1,6 @@
 ﻿$(function () {
 
-    var peer = new Peer("Patient",{
+    var peer = new Peer("Patient-1",{
         key: 'zurreip758eel8fr',
         debug: 3,
         config: {
@@ -47,7 +47,7 @@
 
     navigator.getUserMedia(vgaConstraints, function (stream) {
         $('#myvideo').prop('src', URL.createObjectURL(stream));
-        var call = peer.call('GP',stream);
+        var call = peer.call('GP-1',stream);
         call.on('stream', function (remoteStream) {
             $('#their-video').prop('src', URL.createObjectURL(remoteStream));
             console.log(URL.createObjectURL(remoteStream));
